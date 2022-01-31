@@ -14,8 +14,8 @@ class TeamResult:
     def __init__(self, name: str, points: int):
         self.name: str = name
         self.points: int = points
-        # This step is calculated after all teams are sorted.
-        self.rank = None
+        # NOTE: This step is calculated appropriately after all teams are sorted.
+        self.rank = 0
 
     def __lt__(self, other):
         """
@@ -50,9 +50,10 @@ def parse_match(match: str) -> Match:
     :return: Tuple representing first team name and score and second team name and score.
     """
 
-    t1, t2 = match.strip().split(',')
+    t1, t2 = match.split(',')
 
     def get_team_output(team_str: str):
+        team_str = team_str.strip()
         name, _, score = team_str.rpartition(' ')
         return name.strip(), int(score)
 
