@@ -1,4 +1,4 @@
-# Ranking League Table calculator
+# Ranking League Table calculator [![Actions Status: Python application](https://github.com/gerhardkeuck/game_ranking/workflows/Python%20application/badge.svg)](https://github.com/gerhardkeuck/game_ranking/actions?query=workflow%3A"Python+application")
 
 Demo project for solving the game ranking table problem.
 
